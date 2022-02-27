@@ -10,21 +10,21 @@ namespace Console
     {
         static void Main(string[] args)
         {
+            // Atividade 1
             Alunos alunos = new Alunos();
 
-            //foreach (Alunos aluno in Alunos.ListaDeAlunos())
-            //{
-            //    System.Console.WriteLine(aluno.Nome);
-            //}
-
-
-            // Atividade 1
             alunos = alunos.PesquisaAluno(Alunos.ListaDeAlunos(), 5);
             System.Console.WriteLine(alunos.Matricula.ToString() + " " + alunos.Nome + " " + alunos.Turma);
 
-            System.Console.ReadKey();
-
             // Atividade 2
+            Banco1 banco1 = new Banco1();
+            Banco2 banco2 = new Banco2();
+
+            TransferenciasBancarias TransBanco = new TransferenciasBancarias(banco1, banco2);
+
+            TransBanco.Transferir(banco1,banco2);
+
+            System.Console.ReadKey();
         }
     }
 }

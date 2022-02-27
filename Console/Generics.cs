@@ -73,7 +73,6 @@ namespace Console
             }
             catch (Exception e)
             {
-
                 System.Console.WriteLine("Insira um ID valido! " + e.Message);
                 return null;
             }

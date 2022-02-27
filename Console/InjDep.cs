@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Console
 {
@@ -10,7 +6,6 @@ namespace Console
     {
         void DepositarDinheiro(double qtd);
         double VerificarConta();
-
     }
 
     public class Banco1 : IBancos
@@ -52,8 +47,20 @@ namespace Console
         }
     }
 
-    public class InjDep
+    public class TransferenciasBancarias
     {
+        private IBancos Banco1, Banco2;
 
+        public TransferenciasBancarias(IBancos banco1, IBancos banco2)
+        {
+            Banco1 = banco1;
+            Banco2 = banco2;
+        }
+
+        public void Transferir(IBancos banco1, IBancos banco2)
+        {
+            // TODO: Banco 01 entrega o valor e Banco 02 recebe o valor.
+            System.Console.WriteLine("TransferenciasBancarias.Transferir Executado.");
+        }
     }
 }
