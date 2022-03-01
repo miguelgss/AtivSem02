@@ -35,7 +35,6 @@ namespace Console
 
     public class Banco3 : IBancos
     {
-        public long Dinheiro { get; private set; }
         public void DepositarDinheiro(double qtd)
         {
             throw new NotImplementedException();
@@ -49,15 +48,15 @@ namespace Console
 
     public class TransferenciasBancarias
     {
-        private IBancos Banco1, Banco2;
+        private readonly IBancos Banco1, Banco2;
 
-        public TransferenciasBancarias(IBancos banco1, IBancos banco2)
+        public TransferenciasBancarias(IBancos banco1, IBancos banco2) // Injeção de dependência por construtor
         {
             Banco1 = banco1;
             Banco2 = banco2;
         }
 
-        public void Transferir(IBancos banco1, IBancos banco2)
+        public void Transferir()
         {
             // TODO: Banco 01 entrega o valor e Banco 02 recebe o valor.
             System.Console.WriteLine("TransferenciasBancarias.Transferir Executado.");
