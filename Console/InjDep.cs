@@ -48,7 +48,7 @@ namespace Console
 
     public class TransferenciasBancarias
     {
-        private readonly IBancos Banco1, Banco2;
+        private IBancos Banco1, Banco2;
 
         public TransferenciasBancarias(IBancos banco1, IBancos banco2) // Injeção de dependência por construtor
         {
